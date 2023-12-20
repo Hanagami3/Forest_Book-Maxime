@@ -1,6 +1,6 @@
 package be.intecbrussel.the_notebook.entities.animal_entities;
 
-public class Animal {
+public class Animal implements Comparable<Animal>{
 
     protected String name;
     protected double weight;
@@ -52,5 +52,16 @@ public class Animal {
         if (length < 0)
             length = 0;
         this.length = length;
+    }
+
+
+    @Override
+    public int compareTo(Animal animal) {
+
+        if (this.name.compareTo(animal.name) > 0)
+            return 1;
+        else
+            return -1;
+
     }
 }

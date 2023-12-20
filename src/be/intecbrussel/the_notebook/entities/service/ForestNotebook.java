@@ -7,6 +7,8 @@ import be.intecbrussel.the_notebook.entities.animal_entities.Omnivore;
 import be.intecbrussel.the_notebook.entities.plant_entities.Plant;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class ForestNotebook {
@@ -28,6 +30,9 @@ public class ForestNotebook {
         herbivores = new ArrayList<>();
         animals = new ArrayList<>();
         plants = new ArrayList<>();
+
+        plantCount = getPlantCount();
+        animalCount = getPlantCount();
     }
 
 
@@ -57,11 +62,11 @@ public class ForestNotebook {
     }
 
     public int getPlantCount() {
-        return plantCount;
+        return plants.size();
     }
 
     public int getAnimalCount() {
-        return animalCount;
+        return animals.size();
     }
     //</editor-fold>
 
@@ -96,24 +101,27 @@ public class ForestNotebook {
     }
 
     public void printNoteBook(){
+        animals.forEach(System.out::println);
+        plants.forEach(System.out::println);
 
     }
 
     public void sortAnimalsByName(){
-
+        Collections.sort(animals);
     }
 
     public void sortPlantsByName(){
-
+        Collections.sort(plants);
     }
 
     //BONUS
 
     public void sortAnimalsByHeight(){
-
+        animals.sort(Comparator.comparing(Animal::getHeight));
     }
 
     public void  sortPlantsByHeight(){
+        plants.sort(Comparator.comparing(Plant::getHeight));
 
     }
 

@@ -1,6 +1,6 @@
 package be.intecbrussel.the_notebook.entities.plant_entities;
 
-public class Plant {
+public class Plant implements Comparable<Plant>{
 
     protected String name;
     protected double height;
@@ -30,5 +30,13 @@ public class Plant {
         if (height < 0)
             height = 0;
         this.height = height;
+    }
+
+    @Override
+    public int compareTo(Plant plant) {
+        if (this.name.compareTo(plant.name) > 0)
+            return 1;
+        else
+            return -1;
     }
 }
