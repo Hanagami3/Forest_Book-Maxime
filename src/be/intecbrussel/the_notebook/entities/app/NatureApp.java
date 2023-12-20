@@ -12,46 +12,44 @@ public class NatureApp {
 
         ForestNotebook notebook = new ForestNotebook();
 
-        Tree tree1 = new Tree("Oak");
+        Bush bush1 = new Bush("Japanese Laurel", 2);
+        bush1.setFruit("Drupes");
+        bush1.setLeafType(LeafType.SPEAR);
+
+        Tree tree1 = new Tree("Black Oak", 30);
         tree1.setLeafType(LeafType.HAND);
-        Plant bush = new Bush("bush");
-        Flower flower = new Flower("Rose");
 
-        System.out.println(tree1);
+        Weed weed1 = new Weed("Strawberry Clover",0.03);
+        weed1.setArea(10.5);
 
-        Herbivore herbivore = new Herbivore("coucou");
-        herbivore.addPlantToDiet(tree1);
-        herbivore.addPlantToDiet(bush);
-        herbivore.addPlantToDiet(flower);
+        Flower flower1 = new Flower("Centifolia Rose", 1.5);
+        flower1.setSmell(Scent.SWEET);
 
-        Herbivore herbivore1 = new Herbivore("Sam",23,23,23);
-        Herbivore herbivore2 = new Herbivore("Sam",40, 40, 40);
-        Omnivore omnivore1 = new Omnivore("Toto",2,2,2);
-        Omnivore omnivore2 = new Omnivore("Sasha",100, 100, 100);
-        Carnivore carnivore1 = new Carnivore("Lucie", 55,55,55);
+        Flower flower2 = new Flower("Cystus Albus", 1);
+        flower2.setSmell(Scent.MUSKY);
 
-        notebook.addAnimal(herbivore1);
-        notebook.addAnimal(herbivore2);
-        notebook.addAnimal(omnivore1);
-        notebook.addAnimal(omnivore2);
-        notebook.addAnimal(carnivore1);
 
-        System.out.println();
+        Carnivore carnivore1 = new Carnivore("Wolf", 35.8, 0.7, 1.23);
+        carnivore1.setMaxFoodSize(1.5);
+        Carnivore carnivore2 = new Carnivore("lynx", 34.5, 0.6, 1.05);
+        carnivore2.setMaxFoodSize(1);
+        Carnivore carnivore3 = new Carnivore("Badger", 13, 0.25, 0.8);
+        carnivore3.setMaxFoodSize(0.2);
 
-        herbivore.printDiet();
-        System.out.println();
+        Herbivore herbivore1 = new Herbivore("Deer", 13, 0.65, 0.95);
+        Herbivore herbivore = new Herbivore("Rabbit", 1.5, 0.1, 0.2);
+        Herbivore herbivore2 = new Herbivore("Squirrel", 0.6, 0.1, 0.35);
 
-        System.out.println(notebook.getHerbivores());
-        System.out.println(notebook.getCarnivores());
-        System.out.println(notebook.getOmnivores());
+        Omnivore omnivore1 = new Omnivore("Boar", 120, 0.8, 1.65);
+        omnivore1.setMaxFoodSize(0.5);
+        Omnivore omnivore2 = new Omnivore("Fox", 7, 0.40, 0.7);
+        omnivore2.setMaxFoodSize(0.5);
+        Omnivore omnivore = new Omnivore("Bear", 220, 0.95, 2.25);
+        omnivore.setMaxFoodSize(2);
 
-        System.out.println();
-        notebook.sortAnimalsByName();
 
-        notebook.printNoteBook();
-        System.out.println();
 
-        System.out.println(notebook.getPlantCount());
-        System.out.println(notebook.getAnimalCount());
+
+
     }
 }

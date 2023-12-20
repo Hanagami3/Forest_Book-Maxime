@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aaa3d3b1-b214-46c5-a9d8-ecdd87951f9d" name="Changes" comment="20/12:23">
+    <list default="true" id="aaa3d3b1-b214-46c5-a9d8-ecdd87951f9d" name="Changes" comment="20/12/23 methode terminée">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/be/intecbrussel/the_notebook/entities/animal_entities/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/intecbrussel/the_notebook/entities/animal_entities/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/intecbrussel/the_notebook/entities/app/NatureApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/intecbrussel/the_notebook/entities/app/NatureApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/be/intecbrussel/the_notebook/entities/plant_entities/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/intecbrussel/the_notebook/entities/plant_entities/Plant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/intecbrussel/the_notebook/entities/service/ForestNotebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/intecbrussel/the_notebook/entities/service/ForestNotebook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703070189636</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="20/12/23 methode terminée">
+      <created>1703077059985</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1703077059985</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +103,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="20/12:23" />
-    <option name="LAST_COMMIT_MESSAGE" value="20/12:23" />
+    <MESSAGE value="20/12/23 methode terminée" />
+    <option name="LAST_COMMIT_MESSAGE" value="20/12/23 methode terminée" />
   </component>
 </project>

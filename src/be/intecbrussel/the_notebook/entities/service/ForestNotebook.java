@@ -36,7 +36,7 @@ public class ForestNotebook {
     }
 
 
-    //<editor-fold desc="getters and setters">
+    //<editor-fold desc="'simple' getters and setters">
     public List<Carnivore> getCarnivores() {
         return carnivores;
     }
@@ -61,6 +61,8 @@ public class ForestNotebook {
         this.herbivores = herbivores;
     }
 
+    //</editor-fold>
+
     public int getPlantCount() {
         return plants.size();
     }
@@ -68,7 +70,6 @@ public class ForestNotebook {
     public int getAnimalCount() {
         return animals.size();
     }
-    //</editor-fold>
 
 
     public void addAnimal(Animal animal){
