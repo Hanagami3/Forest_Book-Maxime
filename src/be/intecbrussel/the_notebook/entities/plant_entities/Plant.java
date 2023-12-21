@@ -1,5 +1,7 @@
 package be.intecbrussel.the_notebook.entities.plant_entities;
 
+import be.intecbrussel.the_notebook.entities.service.ForestNotebook;
+
 public class Plant implements Comparable<Plant>{
 
     protected String name;
@@ -9,11 +11,13 @@ public class Plant implements Comparable<Plant>{
 
     public Plant(String name) {
         this.name = name;
+        System.out.println("Je probeerde toe te voegen een plant die al in de note book staat: " + name);
     }
 
     public Plant(String name, double height) {
         this.name = name;
         setHeight(height);
+        ForestNotebook.addPlant(this);
     }
 
 

@@ -1,5 +1,7 @@
 package be.intecbrussel.the_notebook.entities.animal_entities;
 
+import be.intecbrussel.the_notebook.entities.service.ForestNotebook;
+
 public class Animal implements Comparable<Animal>{
 
     protected String name;
@@ -10,6 +12,7 @@ public class Animal implements Comparable<Animal>{
 
     public Animal(String name){
         this.name = name;
+        System.out.println("Je probeerde toe te voegen een dier die al in de note book staat: " + name);
     }
 
     public Animal(String name, double weight, double height, double length) {
@@ -17,6 +20,7 @@ public class Animal implements Comparable<Animal>{
         setWeight(weight);
         setHeight(height);
         setLength(length);
+        ForestNotebook.addAnimal(this);
     }
 
 
@@ -57,11 +61,9 @@ public class Animal implements Comparable<Animal>{
 
     @Override
     public int compareTo(Animal animal) {
-
         if (this.name.compareTo(animal.name) > 0)
             return 1;
         else
             return -1;
-
     }
 }

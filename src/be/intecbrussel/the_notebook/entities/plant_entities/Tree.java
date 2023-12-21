@@ -25,10 +25,9 @@ public class Tree extends Plant{
 
     @Override
     public String toString() {
-        return "Tree{" +
-                "leafType=" + leafType +
-                ", name='" + name + '\'' +
-                ", height=" + height +
-                '}';
+        return "\nTree: " +
+                "\nleafType= " + leafType +
+                "\nname= '" + name + '\'' +
+                "\nheight= " + height;
     }
 }

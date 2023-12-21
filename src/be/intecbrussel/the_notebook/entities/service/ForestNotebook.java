@@ -13,15 +13,15 @@ import java.util.List;
 
 public class ForestNotebook {
 
-    private List<Carnivore> carnivores;
-    private List<Omnivore> omnivores;
-    private List<Herbivore> herbivores;
+    private static List<Carnivore> carnivores;
+    private static List<Omnivore> omnivores;
+    private static List<Herbivore> herbivores;
 
     private int plantCount;
     private int animalCount;
 
-    private List<Animal> animals;
-    private List<Plant> plants;
+    private static List<Animal> animals;
+    private static List<Plant> plants;
 
 
     public ForestNotebook(){
@@ -72,10 +72,10 @@ public class ForestNotebook {
     }
 
 
-    public void addAnimal(Animal animal){
+    public static void addAnimal(Animal animal){
         boolean isInList = false;
         for (Animal animalInList : animals)
-            if (animalInList.getName().equals(animal.getName()))
+            if (animalInList.getName().equalsIgnoreCase(animal.getName()))
                 isInList = true;
         if (!isInList) {
             animals.add(animal);
@@ -87,23 +87,26 @@ public class ForestNotebook {
                 omnivores.add((Omnivore) animal);
         }
         else
-            System.out.println("dit dier staat al in de lijst");
+            animal = new Animal("Dubbel");
     }
 
-    public void addPlant(Plant plant){
+    public static void addPlant(Plant plant){
         boolean isInList = false;
         for (Plant plantInList : plants)
-            if (plantInList.getName().equals(plant.getName()))
+            if (plantInList.getName().equalsIgnoreCase(plant.getName()))
                 isInList = true;
         if (!isInList)
             plants.add(plant);
         else
-            System.out.println("deze plant staat al in de lijst");
+            plant = new Plant("Dubbel");
     }
 
     public void printNoteBook(){
+        System.out.println("\n----Dieren------");
         animals.forEach(System.out::println);
+        System.out.println("\n-----Planten------");
         plants.forEach(System.out::println);
+
 
     }
 

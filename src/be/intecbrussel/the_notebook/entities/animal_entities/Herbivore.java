@@ -41,12 +41,11 @@ public class Herbivore extends Animal{
 
     @Override
     public String toString() {
-        return "Herbivore{" +
-                "plantDiet=" + plantDiet +
-                ", name='" + name + '\'' +
-                ", weight=" + weight +
-                ", height=" + height +
-                ", length=" + length +
-                '}';
+        return "\nHerbivore: " +
+                "\nplantDiet= " + plantDiet.toString() +
+                "\nname= '" + name + '\'' +
+                "\nweight= " + weight +
+                "\nheight= " + height +
+                "\nlength= " + length;
     }
 }

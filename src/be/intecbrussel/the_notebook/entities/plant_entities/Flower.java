@@ -1,5 +1,7 @@
 package be.intecbrussel.the_notebook.entities.plant_entities;
 
+import be.intecbrussel.the_notebook.entities.service.ForestNotebook;
+
 public class Flower extends Plant{
 
     private Scent smell;
@@ -24,10 +26,9 @@ public class Flower extends Plant{
 
     @Override
     public String toString() {
-        return "Flower{" +
-                "smell=" + smell +
-                ", name='" + name + '\'' +
-                ", height=" + height +
-                '}';
+        return "\nFlower: " +
+                "\nsmell= " + smell +
+                "\nname=' " + name + '\'' +
+                "\nheight= " + height;
     }
 }

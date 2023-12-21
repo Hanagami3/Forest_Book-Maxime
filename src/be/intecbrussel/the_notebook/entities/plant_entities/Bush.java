@@ -1,5 +1,7 @@
 package be.intecbrussel.the_notebook.entities.plant_entities;
 
+import be.intecbrussel.the_notebook.entities.service.ForestNotebook;
+
 public class Bush extends Plant{
 
     private String fruit;
@@ -13,7 +15,6 @@ public class Bush extends Plant{
 
     public Bush(String name, double height ) {
         super(name, height);
-
     }
 
 
@@ -37,10 +38,9 @@ public class Bush extends Plant{
 
     @Override
     public String toString() {
-        return "Bush{" +
-                "leafType=" + leafType +
-                ", name='" + name + '\'' +
-                ", height=" + height +
-                '}';
+        return "\nBush: " +
+                "\nleafType=" + leafType +
+                "\nname= '" + name + '\'' +
+                "\nheight=" + height;
     }
 }

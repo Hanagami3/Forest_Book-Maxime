@@ -1,5 +1,7 @@
 package be.intecbrussel.the_notebook.entities.animal_entities;
 
+import be.intecbrussel.the_notebook.entities.service.ForestNotebook;
+
 public class Carnivore extends Animal{
 
     private double maxFoodSize;
@@ -27,12 +29,11 @@ public class Carnivore extends Animal{
 
     @Override
     public String toString() {
-        return "Carnivore{" +
-                "maxFoodSize=" + maxFoodSize +
-                ", name='" + name + '\'' +
-                ", weight=" + weight +
-                ", height=" + height +
-                ", length=" + length +
-                '}';
+        return "\nCarnivore: " +
+                "\nmaxFoodSize= " + maxFoodSize +
+                "\nname= '" + name + '\'' +
+                "\nweight= " + weight +
+                "\nheight= " + height +
+                "\nlength= " + length;
     }
 }
