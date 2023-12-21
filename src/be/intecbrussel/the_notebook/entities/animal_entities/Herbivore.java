@@ -5,6 +5,7 @@ import be.intecbrussel.the_notebook.entities.plant_entities.Plant;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Herbivore extends Animal{
 
@@ -42,10 +43,10 @@ public class Herbivore extends Animal{
     @Override
     public String toString() {
         return "\nHerbivore: " +
-                "\nplantDiet= " + plantDiet.toString() +
                 "\nname= '" + name + '\'' +
                 "\nweight= " + weight +
                 "\nheight= " + height +
-                "\nlength= " + length;
+                "\nlength= " + length +
+                "\nplantDiet= " + plantDiet;
     }
 }

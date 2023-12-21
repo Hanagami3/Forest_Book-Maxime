@@ -87,7 +87,7 @@ public class ForestNotebook {
                 omnivores.add((Omnivore) animal);
         }
         else
-            animal = new Animal("Dubbel");
+            animal = new Animal(animal.getName());
     }
 
     public static void addPlant(Plant plant){
@@ -98,7 +98,7 @@ public class ForestNotebook {
         if (!isInList)
             plants.add(plant);
         else
-            plant = new Plant("Dubbel");
+            plant = new Plant(plant.getName());
     }
 
     public void printNoteBook(){

@@ -33,7 +33,6 @@ public class Omnivore extends Animal {
     }
 
     public double getMaxFoodSize() {
-
         return maxFoodSize;
     }
 
@@ -51,11 +50,11 @@ public class Omnivore extends Animal {
     @Override
     public String toString() {
         return "\nOmnivore: " +
-                "\nplantDiet=" + plantDiet +
                 "\nmaxFoodSize=" + maxFoodSize +
                 "\nname='" + name + '\'' +
                 "\nweight=" + weight +
                 "\nheight=" + height +
-                "\nlength=" + length;
+                "\nlength=" + length +
+                "\nplantDiet= " + plantDiet;
     }
 }

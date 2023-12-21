@@ -1,10 +1,15 @@
 package be.intecbrussel.the_notebook.entities.app;
 
+import be.intecbrussel.the_notebook.entities.animal_entities.Animal;
 import be.intecbrussel.the_notebook.entities.animal_entities.Carnivore;
 import be.intecbrussel.the_notebook.entities.animal_entities.Herbivore;
 import be.intecbrussel.the_notebook.entities.animal_entities.Omnivore;
 import be.intecbrussel.the_notebook.entities.plant_entities.*;
 import be.intecbrussel.the_notebook.entities.service.ForestNotebook;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class NatureApp {
 
@@ -19,10 +24,10 @@ public class NatureApp {
         Tree treeOak = new Tree("Black Oak", 30);
         treeOak.setLeafType(LeafType.HAND);
 
-        Weed weedClover = new Weed("Strawberry Clover",0.03);
-        weedClover.setArea(10.5);
         Weed weedClover1 = new Weed("Strawberry Clover",0.03);
-        weedClover.setArea(10.5);
+        weedClover1.setArea(10.5);
+        Weed weedClover2 = new Weed("Strawberry Clover",0.03);
+        weedClover2.setArea(10.5);
 
         Flower flowerRose = new Flower("Centifolia Rose", 1.5);
         flowerRose.setSmell(Scent.SWEET);
@@ -39,7 +44,7 @@ public class NatureApp {
 
         Herbivore herbiDeer = new Herbivore("Deer", 13, 0.65, 0.95);
         herbiDeer.addPlantToDiet(treeOak);
-        herbiDeer.addPlantToDiet(weedClover);
+        herbiDeer.addPlantToDiet(weedClover1);
         Herbivore herbiRabbit = new Herbivore("Rabbit", 1.5, 0.1, 0.2);
         herbiRabbit.addPlantToDiet(flowerCystus);
         Herbivore herbiSquirrel = new Herbivore("Squirrel", 0.6, 0.1, 0.35);
@@ -59,7 +64,7 @@ public class NatureApp {
         omniBear2.setMaxFoodSize(2);
         omniBear2.addPlantToDiet(treeOak);
 
-        System.out.println("-------------Aantal dieren en planten-------------");
+        System.out.println("\n-------------Aantal dieren en planten-------------");
         System.out.println("dieren: " + notebook.getAnimalCount());
         System.out.println("planten: " + notebook.getPlantCount());
 
@@ -79,8 +84,9 @@ public class NatureApp {
         notebook.printNoteBook();
 
 
-
-
-
+        System.out.println("\n\n\n-------------Bonus sortByHeight lijst-----------");
+        notebook.sortAnimalsByHeight();
+        notebook.sortPlantsByHeight();
+        notebook.printNoteBook();
     }
 }
