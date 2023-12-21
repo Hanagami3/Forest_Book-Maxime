@@ -1,15 +1,10 @@
 package be.intecbrussel.the_notebook.entities.app;
 
-import be.intecbrussel.the_notebook.entities.animal_entities.Animal;
 import be.intecbrussel.the_notebook.entities.animal_entities.Carnivore;
 import be.intecbrussel.the_notebook.entities.animal_entities.Herbivore;
 import be.intecbrussel.the_notebook.entities.animal_entities.Omnivore;
 import be.intecbrussel.the_notebook.entities.plant_entities.*;
 import be.intecbrussel.the_notebook.entities.service.ForestNotebook;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class NatureApp {
 
